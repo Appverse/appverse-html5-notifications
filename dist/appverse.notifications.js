@@ -77,7 +77,7 @@ angular.module('appverse.notifications', []);
             function showNotification(notificationData) {
                 // Crea la notificacion
                 var notification = new NotificationFx({
-                    message: '<span class="glyphicon glyphicon-info-sign"></span><p>' + notificationData.text + '</p>',
+                    message: '<span class="glyphicon glyphicon-info-sign"></span><p>' + Notification.translate(notificationData.text) + '</p>',
                     layout: 'bar',
                     effect: 'slidetop',
                     type: notificationData.type, // notice, warning or error
