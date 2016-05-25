@@ -19,7 +19,7 @@
  POSSIBILITY OF SUCH DAMAGE.
  */
 // Creamos el módulo alerts
-angular.module('appverse.notifications', []);
+angular.module('appverse.notifications', ['appverse.translate']);
 
 /*
  Copyright (c) 2015 GFT Appverse, S.L., Sociedad Unipersonal.

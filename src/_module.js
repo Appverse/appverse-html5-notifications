@@ -19,4 +19,4 @@
  POSSIBILITY OF SUCH DAMAGE.
  */
 // Creamos el módulo alerts
-angular.module('appverse.notifications', []);
+angular.module('appverse.notifications', ['appverse.translate']);
