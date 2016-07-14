@@ -27,7 +27,7 @@
      * Muestra notificaciones.
      * Se conecta con la vista a través de la directiva <div notification></div> (en index.html)
      */
-    .factory('Notification', function($translate) {
+    .factory('Notification', function() {
 
         // Datos iniciales de la notificacion
         var showStatus = false;
@@ -60,11 +60,8 @@
             onClose: function onClose() {
                 showStatus = false;
                 data = initData();
-            },
-
-            translate: function translate(value){
-                return $translate(value);
             }
+
         };
 
         function initData() {

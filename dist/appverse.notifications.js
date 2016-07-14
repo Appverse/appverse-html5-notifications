@@ -19,7 +19,7 @@
  POSSIBILITY OF SUCH DAMAGE.
  */
 // Creamos el módulo alerts
-angular.module('appverse.notifications', ['appverse.translate']);
+angular.module('appverse.notifications', []);
 
 /*
  Copyright (c) 2015 GFT Appverse, S.L., Sociedad Unipersonal.
@@ -77,7 +77,7 @@ angular.module('appverse.notifications', ['appverse.translate']);
             function showNotification(notificationData) {
                 // Crea la notificacion
                 var notification = new NotificationFx({
-                    message: '<span class="glyphicon glyphicon-info-sign"></span><p>' + Notification.translate(notificationData.text) + '</p>',
+                    message: '<span class="glyphicon glyphicon-info-sign"></span><p>' + notificationData.text + '</p>',
                     layout: 'bar',
                     effect: 'slidetop',
                     type: notificationData.type, // notice, warning or error
@@ -122,7 +122,7 @@ angular.module('appverse.notifications', ['appverse.translate']);
      * Muestra notificaciones.
      * Se conecta con la vista a través de la directiva <div notification></div> (en index.html)
      */
-    .factory('Notification', ["$translate", function($translate) {
+    .factory('Notification', function() {
 
         // Datos iniciales de la notificacion
         var showStatus = false;
@@ -155,11 +155,8 @@ angular.module('appverse.notifications', ['appverse.translate']);
             onClose: function onClose() {
                 showStatus = false;
                 data = initData();
-            },
-
-            translate: function translate(value){
-                return $translate(value);
             }
+
         };
 
         function initData() {
@@ -168,6 +165,6 @@ angular.module('appverse.notifications', ['appverse.translate']);
                 type: 'notice' // notice, warning or error
             };
         }
-    }]);
+    });
 
 })();
