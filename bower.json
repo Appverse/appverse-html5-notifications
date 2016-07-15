@@ -24,8 +24,7 @@
     "gruntfile.js",
     "package.json",
     "sonar-project.properties",
-    "changelog.js",
-    "dist"
+    "changelog.js"
   ],
   "resolutions": {
     "angular": "~1.3.15"
