@@ -22,7 +22,7 @@ describe('Unit: Testing appverse.notifications module', function() {
     it('should be have a working notification directive', function() {
         $compile(angular.element('<div notification></div>'))(scope);
         NotificationFactory.show('test message');
-        scope.$apply();
+        expect(NotificationFactory.shouldShow()).to.be.true;
     });
 
 });
