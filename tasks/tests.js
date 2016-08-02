@@ -3,6 +3,10 @@
 
 module.exports = function(grunt) {
 
+    grunt.registerTask('test', [
+      'karma:unit'
+    ]);
+
     grunt.registerTask('test:unit:watch', [
         'karma:unitAutoWatch'
     ]);

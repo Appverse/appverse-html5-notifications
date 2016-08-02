@@ -13,6 +13,7 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('make_dist_and_test', [
+        'test',
         'dist:make'
     ]);
 
