@@ -5,7 +5,8 @@
   "main": "dist/appverse.notifications.min.js",
   "dependencies": {
     "angular": "~1.5.8",
-    "classie": "~1.0.1"
+    "classie": "~1.0.1",
+    "appverse-web-html5-core": "0.8.0"
   },
   "devDependencies": {
     "angular-mocks": "~1.5.8",
