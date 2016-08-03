@@ -50,6 +50,7 @@ angular.module('appverse.notifications', ['appverse.translate']);
      * cuando el servicio Notification.show() es llamado desde cualquier
      * parte de la aplicación
      */
+    notificationDirective.$inject = ["Notification"];
     angular.module('appverse.notifications').directive('notification', notificationDirective);
 
     function notificationDirective(Notification) {
@@ -89,7 +90,6 @@ angular.module('appverse.notifications', ['appverse.translate']);
         }
 
     }
-    notificationDirective.$inject = ["Notification"];
 
 })(window.NotificationFx);
 
